@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 ENV ANDROID_HOME="/opt/android-sdk" \
-    PATH="/opt/android-sdk/tools/bin:/opt/flutter/bin:/opt/flutter/bin/cache/dart-sdk/bin:$PATH"
+    PATH="/opt/android-sdk/tools/bin:/opt/flutter/bin:/opt/flutter/bin/cache/dart-sdk/bin:/opt/android-sdk/platform-tools/:$PATH"
 
 RUN groupadd -g 1000 flutter && \
     useradd -u 1000 -g flutter -m flutter -G sudo
